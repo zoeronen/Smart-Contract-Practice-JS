@@ -14,7 +14,9 @@
     "@nomiclabs/hardhat-waffle": "^2.0.3",
     "dotenv": "^16.0.2",
     "hardhat": "^2.11.0",
+    "hardhat-gas-reporter": "^1.0.9",
     "prettier": "^2.7.1",
-    "prettier-plugin-solidity": "^1.0.0-beta.24"
+    "prettier-plugin-solidity": "^1.0.0-beta.24",
+    "solidity-coverage": "^0.8.1"
   }
 }
