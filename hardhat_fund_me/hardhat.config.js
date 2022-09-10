@@ -4,8 +4,7 @@ require("@nomiclabs/hardhat-etherscan")
 require("dotenv").config()
 require("solidity-coverage")
 require("hardhat-deploy")
-// You need to export an object to set up your config
-// Go to https://hardhat.org/config/ to learn more
+
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
@@ -16,6 +15,9 @@ const KOVAN_RPC_URL =
     "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 const RINKEBY_RPC_URL =
     process.env.RINKEBY_RPC_URL ||
+    "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
+const GOERLI_RPC_URL =
+    process.env.GOERLI_RPC_URL ||
     "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 const PRIVATE_KEY =
     process.env.PRIVATE_KEY ||
@@ -40,6 +42,12 @@ module.exports = {
             url: RINKEBY_RPC_URL,
             accounts: [PRIVATE_KEY],
             chainId: 4,
+            blockConfirmations: 6,
+        },
+        goerli: {
+            url: GOERLI_RPC_URL,
+            accounts: [PRIVATE_KEY],
+            chainId: 5,
             blockConfirmations: 6,
         },
     },
