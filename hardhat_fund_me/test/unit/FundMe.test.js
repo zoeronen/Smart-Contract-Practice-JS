@@ -22,7 +22,7 @@ const { developmentChains } = require("../../helper-hardhat-config")
           })
 
           describe("constructor", function () {
-              it("sets the aggregator addresses correctly", async () => {
+              it("Sets the aggregator addresses correctly", async () => {
                   const response = await fundMe.getPriceFeed()
                   assert.equal(response, mockV3Aggregator.address)
               })
@@ -55,7 +55,7 @@ const { developmentChains } = require("../../helper-hardhat-config")
               beforeEach(async () => {
                   await fundMe.fund({ value: sendValue })
               })
-              it("withdraws ETH from a single funder", async () => {
+              it("Withdraws ETH from a single funder", async () => {
                   // Arrange
                   const startingFundMeBalance =
                       await fundMe.provider.getBalance(fundMe.address)
@@ -86,7 +86,7 @@ const { developmentChains } = require("../../helper-hardhat-config")
               })
               // this test is overloaded. Ideally we'd split it into multiple tests
               // but for simplicity we left it as one
-              it("is allows us to withdraw with multiple funders", async () => {
+              it("Allows us to withdraw with multiple funders", async () => {
                   // Arrange
                   const accounts = await ethers.getSigners()
                   for (i = 1; i < 6; i++) {
