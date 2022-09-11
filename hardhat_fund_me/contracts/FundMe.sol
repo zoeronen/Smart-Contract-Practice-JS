@@ -48,7 +48,7 @@ contract FundMe {
         i_owner = msg.sender;
     }
 
-    /// @notice Funds our contract based on the ETH/USD price
+    /** @notice Funds our contract based on the ETH/USD price */
     function fund() public payable {
         require(
             msg.value.getConversionRate(s_priceFeed) >= MINIMUM_USD,
