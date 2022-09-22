@@ -10,14 +10,8 @@ require("dotenv").config()
  * @type import('hardhat/config').HardhatUserConfig
  */
 
-const MAINNET_RPC_URL =
-  process.env.MAINNET_RPC_URL ||
-  process.env.ALCHEMY_MAINNET_RPC_URL ||
-  "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
-const GOERLI_RPC_URL =
-  process.env.GOERLI_RPC_URL ||
-  "https://eth-goerli.alchemyapi.io/v2/your-api-key"
-  "https://polygon-mainnet.alchemyapi.io/v2/your-api-key"
+const MAINNET_RPC_URL = process.env.MAINNET_RPC_URL
+const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 
 // Your API key for Etherscan, obtain one at https://etherscan.io/
